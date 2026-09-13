@@ -1,18 +1,19 @@
 import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
 import giftsRouter from "./routes/gifts.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
-app.use("/public", express.static("public"));
-app.use("/scripts", express.static("./public/scripts"));
-app.use('/gifts', giftsRouter);
+app.use(express.static(path.join(__dirname, "../client/public")));
+app.use("/src", express.static(path.join(__dirname, "../client/src")));
+app.use("/gifts", giftsRouter);
 
 app.get("/", (req, res) => {
-  res
-    .status(200)
-    .send(
-      '<h1 style="text-align: center; margin-top: 50px;">UnEarthed API</h1>',
-    );
+  res.sendFile(path.join(__dirname, "../client/index.html"));
 });
 
 const PORT = process.env.PORT || 3001;
@@ -20,5 +21,3 @@ const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on http://localhost:${PORT}`);
 });
-
-app.use("/gifts", giftsRouter);

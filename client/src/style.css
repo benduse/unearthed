@@ -54,6 +54,51 @@ body {
   margin: 0;
 }
 
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 0 32px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1126px;
+  margin: 0 auto;
+  height: 64px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-left img {
+  height: 36px;
+  width: auto;
+}
+
+.header-left h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.header-right button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.header-right button:hover {
+  opacity: 0.85;
+}
+
 h1,
 h2 {
   font-family: var(--heading);
