@@ -52,4 +52,5 @@ else{
   mainContent.appendChild(message)
 }
 }
+
 renderGifts()
