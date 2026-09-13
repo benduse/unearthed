@@ -15,7 +15,7 @@ const headerTitle = document.createElement('h1')
 headerTitle.textContent = 'UnEarthed'
 
 
-headerLeft.appendChild(headerLogo)
+headerLeft.appendChild(img)
 headerLeft.appendChild(headerTitle)
 
 const headerRight = document.createElement('div')
@@ -24,7 +24,7 @@ headerRight.className = 'header-right'
 const headerButton = document.createElement('button')
 headerButton.textContent = 'Home'
 
-headerButton.addEventListener('click', function handleClick(event){
+headerButton.addEventListener('click', function handleClick(){
     window.location='/'
 })
 
