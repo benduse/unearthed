@@ -90,6 +90,8 @@ npm run dev
 ## API Reference
 
 Base URL: `http://localhost:3001`
+Kill the server: lsof -ti :3001 | xargs kill -9
+Check if it stopped: lsof -i :3001
 
 ### Gifts
 

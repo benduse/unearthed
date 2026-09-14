@@ -299,7 +299,7 @@ let giftData = [
     pricePoint: "$",
     audience: "Home Fragrance Lovers",
     image:
-      "https://images.unsplash.com/photo-1608181831718-c9e5c5c7b5a3?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=800&q=80",
     description:
       "Fragrant wax melts that create a warm and inviting atmosphere in your home.",
     submittedBy: "Reese",
